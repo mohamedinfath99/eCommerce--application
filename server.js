@@ -3,7 +3,8 @@ import colors from 'colors';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import connect from './config/db.js';
-import authRoutes from './routes/authRoutes.js'
+import authRoutes from './routes/authRoutes.js';
+import cors from 'cors';
 
 
 
@@ -15,6 +16,7 @@ const app = express();
 
 
 // middleware
+app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
