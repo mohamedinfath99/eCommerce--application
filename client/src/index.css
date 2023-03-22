@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* overflow: hidden; */
 }
 
 
@@ -72,8 +73,8 @@
     background: #000000;
 
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #434343,#000000);
-    
+    background: -webkit-linear-gradient(to right, #434343, #000000);
+
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #434343, #000000);
 }
@@ -131,5 +132,5 @@
     align-items: center;
     justify-content: center;
     text-align: justify;
-    
-  }
+
+}
