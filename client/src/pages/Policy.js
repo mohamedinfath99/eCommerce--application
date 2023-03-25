@@ -17,14 +17,14 @@ const Policy = () => {
         </div>
 
         <div className="col-md-4">
+        <h1 className="bg-dark p-2 text-white text-center">PRIVACY</h1>
+          <br />
           <p>✒️ We offer free shipping on all orders within the United States.</p>
-          <p>✒️ We collect only the necessary information to process and fulfill your orders.</p>
-          <p>✒️ Shipping costs for returns are the responsibility of the customer.</p>
+           <p>✒️ Shipping costs for returns are the responsibility of the customer.</p>
           <p>✒️ Products must be returned in their original condition and packaging.</p>
           <p>✒️ Orders are typically processed and shipped within 1-2 business days.</p>
           <p>✒️ You can contact us via email, phone, or live chat.</p>
-          <p>✒️ We offer a warranty on all products against defects in materials and workmanship</p>
-        </div>
+          </div>
 
       </div>
 
