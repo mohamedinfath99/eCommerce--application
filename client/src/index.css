@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* overflow: hidden; */
 }
 
 
@@ -19,10 +18,13 @@
     box-shadow: 0 8px 6px -6px gray;
     --webkit-box-shadow: 0 8px 6px -6px gray;
     border-bottom: solid gray !important;
+    background-color: rgb(198, 197, 202);
 }
 
-.navbar-brand {
-    font-weight: bold;
+
+
+.logo {
+    color: rgb(244, 42, 6);
 }
 
 .collapse {
@@ -42,7 +44,7 @@
 }
 
 .navbar-brand {
-    font-weight: 700;
+    font-weight: bold;
     font-family: "roboto", sans-serif;
     letter-spacing: 3px;
 }
@@ -77,6 +79,11 @@
 
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #434343, #000000);
+
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer a {
@@ -90,7 +97,40 @@
     border-bottom: 1px solid #ffefba;
 }
 
+.footter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
+.footer-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.footer-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+}
+
+.footer-2 h1{
+    color: tomato;
+}
+
+.footer-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
 
 /* Page Not Found css */
 .pnf {
@@ -127,7 +167,7 @@
 .contactus {
     margin: 0;
     padding: 0;
-    height: 70vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,28 +179,124 @@
 .product-link {
     text-decoration: none !important;
     color: black !important;
-  }
-  
-  .cat-btn {
+}
+
+.cat-btn {
     padding: 40px 0px;
     font-size: 24px;
     text-transform: uppercase;
-  }
-  .cat-btn:hover {
+}
+
+.cat-btn:hover {
     background-color: #434343;
     color: white;
-  }
-  /* ================
-  ====dashboard
-  =================== */
-  
-  .dashboard {
-    margin-top: 100px !important;
-  }
-  
-  .dashboard-menu h4 {
-    background-color: #434343 !important;
+}
+
+
+
+.dashboard {
+    margin-top: 80px !important;
+    /* margin-bottom: 180px !important; */
+}
+
+.dashboard1 {
+    margin-top: 80px !important;
+    margin-bottom: 200px !important;
+}
+
+.dashboard-menu h4 {
+    background-color: #383030 !important;
     color: white;
     padding: 20px 0px;
-  }
-  
+    margin-bottom: 20px;
+}
+
+
+.admin-sidebar{
+    padding: 20px;
+}
+
+.admin-sidebar:hover{
+    color:tomato;
+}
+
+
+.user-sidebar{
+    padding: 20px;
+}
+
+.user-sidebar:hover{
+    color:tomato;
+}
+
+
+.admin-image{
+    margin-bottom: 10px;
+    width: 90%;
+    height: 300px;
+}
+
+.admin-details{
+    margin-top: 20px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.bottem_change{
+    margin-bottom: 20px !important;
+}
+
+
+.card-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+.btn-forn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.search-item{
+    margin-top: 30px;
+    height: 90vh;
+}
+
+
+.title1{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.form-control1{
+    margin-top: 20px;
+}
+
+.card-details1{
+    margin-top: 20px;
+}
+
+.dashmenu{
+    margin-right: 30px;
+}
+
+
+.border1{
+    margin-bottom: 20px !important;
+}
+
+
+.cart-page{
+    height: 90vh;
+}
