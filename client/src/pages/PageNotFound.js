@@ -8,7 +8,7 @@ const Pagenotfound = () => {
   return (
     <Layout title={"go back- page not found"}>
 
-      <div className="pnf">
+      <div className="pnf contactus">
 
         <h1 className="pnf-title">404</h1>
         <h2 className="pnf-heading">Oops ! Page Not Found</h2>
