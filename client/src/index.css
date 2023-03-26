@@ -300,3 +300,15 @@
 .cart-page{
     height: 90vh;
 }
+
+.image-size{
+    width: 300px;
+    height: 250px;
+}
+
+.image-divv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
