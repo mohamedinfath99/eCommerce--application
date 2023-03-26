@@ -8,7 +8,7 @@ const Categories = () => {
   const categories = useCategory();
   return (
     <Layout title={"All Categories"}>
-      <div className="container" style={{ marginTop: "100px" }}>
+      <div className="container" style={{ marginTop: "100px", marginBottom: "25vh" }}>
 
         <div className="row container">
           {categories.map((c) => (
