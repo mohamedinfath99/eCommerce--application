@@ -55,8 +55,8 @@ const ProductDetails = () => {
 
       <div className="row container product-details">
 
-        <div className="col-md-6">
-          <img src={`/api/v1/product/product-photo/${product._id}`} className="card-img-top" alt={product.name} height="300" width={"350px"} />
+        <div className="col-md-6 image-divv">
+          <img src={`/api/v1/product/product-photo/${product._id}`} className="card-img-top image-size" alt={product.name} />
         </div>
 
         <div className="col-md-6 product-details-info">
