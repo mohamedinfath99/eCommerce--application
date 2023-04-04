@@ -7,9 +7,10 @@ import axios from "axios";
 
 
 const Profile = () => {
-  //context
+
+
   const [auth, setAuth] = useAuth();
-  //state
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,17 +19,21 @@ const Profile = () => {
 
   //get user data
   useEffect(() => {
+
     const { email, name, phone, address } = auth?.user;
     setName(name);
     setPhone(phone);
     setEmail(email);
     setAddress(address);
+
   }, [auth?.user]);
 
   // form function
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
+
       const { data } = await axios.put("/api/v1/auth/profile", {
         name,
         email,
@@ -36,9 +41,12 @@ const Profile = () => {
         phone,
         address,
       });
+
       if (data?.errro) {
         toast.error(data?.error);
-      } else {
+
+      }
+      else {
         setAuth({ ...auth, user: data?.updatedUser });
         let ls = localStorage.getItem("auth");
         ls = JSON.parse(ls);
@@ -46,15 +54,21 @@ const Profile = () => {
         localStorage.setItem("auth", JSON.stringify(ls));
         toast.success("Profile Updated Successfully");
       }
-    } catch (error) {
+
+    }
+    catch (error) {
       console.log(error);
       toast.error("Something went wrong");
+
     }
   };
+
+
   return (
     <Layout title={"Your Profile"}>
       <div className="container-fluid m-3 p-3 dashboard1">
         <div className="row">
+
           <div className="col-md-3 dashmenu">
             <UserMenu />
           </div>
@@ -63,6 +77,7 @@ const Profile = () => {
             <div className="card-details">
               <form onSubmit={handleSubmit} className="card-details">
                 <h4 className="text-center title1">USER PROFILE</h4>
+
                 <div className="mb-3">
                   <input
                     type="text"
@@ -72,9 +87,10 @@ const Profile = () => {
                     id="exampleInputEmail1"
                     placeholder="Enter Your Name"
                     autoFocus
-                    style={{width :"400px"}}
+                    style={{ width: "400px" }}
                   />
                 </div>
+
                 <div className="mb-3">
                   <input
                     type="email"
@@ -84,9 +100,10 @@ const Profile = () => {
                     id="exampleInputEmail1"
                     placeholder="Enter Your Email "
                     disabled
-                    style={{width :"400px"}}
+                    style={{ width: "400px" }}
                   />
                 </div>
+
                 <div className="mb-3">
                   <input
                     type="password"
@@ -95,9 +112,10 @@ const Profile = () => {
                     className="form-control1 form-control"
                     id="exampleInputPassword1"
                     placeholder="Enter Your Password"
-                    style={{width :"400px"}}
+                    style={{ width: "400px" }}
                   />
                 </div>
+
                 <div className="mb-3">
                   <input
                     type="text"
@@ -106,9 +124,10 @@ const Profile = () => {
                     className="form-control1 form-control"
                     id="exampleInputEmail1"
                     placeholder="Enter Your Phone"
-                    style={{width :"400px"}}
+                    style={{ width: "400px" }}
                   />
                 </div>
+
                 <div className="mb-3">
                   <input
                     type="text"
@@ -117,17 +136,20 @@ const Profile = () => {
                     className="form-control1 form-control"
                     id="exampleInputEmail1"
                     placeholder="Enter Your Address"
-                    style={{width :"400px"}}
+                    style={{ width: "400px" }}
                   />
                 </div>
 
                 <button type="submit" className="btn btn-primary card-details1">
                   UPDATE
                 </button>
+
               </form>
+
             </div>
           </div>
         </div>
+
       </div>
     </Layout>
   );
