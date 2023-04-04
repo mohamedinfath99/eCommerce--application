@@ -3,13 +3,14 @@
 PROJECT INSTRUCTIONS
 
 <br />
+
 STEP – 01
 
 Download project source code.
 
 GitHub: https://github.com/mohamedinfath99/eCommerce-application.git
 
-< br />
+<br />
 
 STEP - 02
 
