@@ -6,23 +6,32 @@ import axios from "axios";
 
 
 const CategoryProduct = () => {
+
   const params = useParams();
   const navigate = useNavigate();
+
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState([]);
 
   useEffect(() => {
     if (params?.slug) getPrductsByCat();
+
   }, [params?.slug]);
+
+
   const getPrductsByCat = async () => {
     try {
+
       const { data } = await axios.get(
         `/api/v1/product/product-category/${params.slug}`
       );
       setProducts(data?.products);
       setCategory(data?.category);
-    } catch (error) {
+
+    } 
+    catch (error) {
       console.log(error);
+    
     }
   };
 
@@ -38,6 +47,7 @@ const CategoryProduct = () => {
         <div className="row cardd">
           <div className="col-md-9 offset-1">
             <div className="d-flex flex-wrap ">
+              
               {products?.map((p) => (
                 <div className="card m-2 " key={p._id}>
                   <img
@@ -73,9 +83,11 @@ const CategoryProduct = () => {
                   </div>
                 </div>
               ))}
+
             </div>
           </div>
         </div>
+        
       </div>
     </Layout>
   );
