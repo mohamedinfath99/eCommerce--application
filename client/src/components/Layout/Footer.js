@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <h6 className="text-center">Copyright © 1996–2023 Trripy.com™.</h6>
+      <h6 className="text-center">Copyright © 1999–2023 Trripy.com™.</h6>
     </div>
   );
 };
