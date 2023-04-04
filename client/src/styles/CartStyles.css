@@ -1,6 +1,3 @@
-/* .cart-page {
-  margin-top: 64px;
-} */
 
 .cart-page h2 {
   padding: 15px !important;
@@ -8,6 +5,8 @@
   font-weight: bold;
   background-color: rgba(0, 0, 255, 0.072) !important;
 }
+
+
 .cart-page h2 > p {
   font-size: 20px;
   margin-top: 10px;
@@ -23,12 +22,15 @@
   margin-bottom: 10px !important;
   margin-right: 20px;
 }
+
+
 .cart-page .cart-remove-btn {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+
 .cart-page .cart-summary {
   text-align: center;
-  /* margin-top: -140px !important; */
 }
