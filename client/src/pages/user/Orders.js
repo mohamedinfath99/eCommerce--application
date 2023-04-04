@@ -6,33 +6,45 @@ import { useAuth } from "../../context/auth";
 import moment from "moment";
 
 const Orders = () => {
+
   const [orders, setOrders] = useState([]);
   const [auth, setAuth] = useAuth();
+
   const getOrders = async () => {
     try {
+
       const { data } = await axios.get("/api/v1/auth/orders");
       setOrders(data);
-    } catch (error) {
+
+    }
+    catch (error) {
       console.log(error);
+
     }
   };
 
   useEffect(() => {
     if (auth?.token) getOrders();
+
   }, [auth?.token]);
+
   return (
     <Layout title={"Your Orders"}>
       <div className="container-flui p-3 m-3 dashboard">
         <div className="row">
+
           <div className="col-md-3 dashmenu">
             <UserMenu />
           </div>
+
           <div className="col-md-8">
             <h1 className="text-center">ALL ORDERS</h1>
+
             {orders?.map((o, i) => {
               return (
                 <div className="border shadow border1">
                   <table className="table">
+
                     <thead>
                       <tr>
                         <th scope="col">#</th>
@@ -43,6 +55,7 @@ const Orders = () => {
                         <th scope="col">Quantity</th>
                       </tr>
                     </thead>
+
                     <tbody>
                       <tr>
                         <td>{i + 1}</td>
@@ -53,7 +66,10 @@ const Orders = () => {
                         <td>{o?.products?.length}</td>
                       </tr>
                     </tbody>
+
                   </table>
+
+
                   <div className="container">
                     {o?.products?.map((p, i) => (
                       <div className="row mb-2 p-3 card flex-row" key={p._id}>
@@ -66,6 +82,7 @@ const Orders = () => {
                             height={"180px"}
                           />
                         </div>
+
                         <div className="col-md-8">
                           <p>{p.name}</p>
                           <p>{p.description.substring(0, 30)}</p>
@@ -73,12 +90,15 @@ const Orders = () => {
                         </div>
                       </div>
                     ))}
+
                   </div>
                 </div>
               );
             })}
+
           </div>
         </div>
+
       </div>
     </Layout>
   );
