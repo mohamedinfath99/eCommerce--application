@@ -14,15 +14,12 @@ const ProductDetails = () => {
   const [relatedProducts, setRelatedProducts] = useState([]);
 
 
-
-  //--------------inital details------------>
   useEffect(() => {
     if (params?.slug) getProduct();
   }, [params?.slug]);
 
   
 
-  //---------------getProduct-------------->
   const getProduct = async () => {
     try {
 
@@ -37,7 +34,6 @@ const ProductDetails = () => {
   };
 
 
-  //------------get similar product---------->
   const getSimilarProduct = async (pid, cid) => {
     try {
 
@@ -110,21 +106,8 @@ const ProductDetails = () => {
                   <button className="btn btn-info ms-1"  onClick={() => navigate(`/product/${p.slug}`)} >
                     More Details
                   </button>
-                  
-                  {/* <button
-                  className="btn btn-dark ms-1"
-                  onClick={() => {
-                    setCart([...cart, p]);
-                    localStorage.setItem(
-                      "cart",
-                      JSON.stringify([...cart, p])
-                    );
-                    toast.success("Item Added to cart");
-                  }}
-                >
-                  ADD TO CART
-                </button> */}
                 </div>
+                
               </div>
 
             </div>
