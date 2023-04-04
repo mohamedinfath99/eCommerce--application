@@ -60,6 +60,8 @@ const ForgotPasssword = () => {
                             required
                         />
                     </div>
+
+
                     <div className="mb-3">
                         <input
                             type="text"
@@ -71,6 +73,8 @@ const ForgotPasssword = () => {
                             required
                         />
                     </div>
+
+
                     <div className="mb-3">
                         <input
                             type="password"
@@ -83,9 +87,12 @@ const ForgotPasssword = () => {
                         />
                     </div>
 
+
                     <button type="submit" className="btn btn-primary">
                         RESET
                     </button>
+
+                    
                 </form>
             </div>
         </Layout>
